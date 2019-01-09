@@ -1,0 +1,112 @@
+//part one functions!-question 1
+	class Program
+	{
+		static void Main(string[] args)
+		{
+
+			Console.WriteLine("Enter a number!");
+			int x = Convert.ToInt32(Console.ReadLine());
+			Power2(ref x);
+			Console.WriteLine($"power 2 of your number is {x}");
+		}
+		private static void Power2(ref int i)
+		{
+			i = i * 2;
+		}
+	}
+//end question 1
+
+//question2
+The answer is yes because unlike other variables when using array the function points to a specific memory cell in the array
+//question3
+The amswer is NO because the function initializing an new array
+//question4
+class Program
+	{
+		static void Main(string[] args)
+		{
+			
+				int[] a=new int[10];
+			int[] b = new int[10];
+				InitializeArrays(out a,out b);
+				for (int i = 0; i < a.Length; i++)
+				{
+					Console.WriteLine(a[i]);
+				}
+				for (int i = 0; i < b.Length; i++)
+				{
+					Console.WriteLine(b[i]);
+				}
+			}
+			private static void InitializeArrays(out int[] a,out int[] b)
+			{
+				Random r = new Random();
+				a = new int[10];
+				b = new int[10];
+				for (int i = 0; i < 10; i++)
+				{
+					a[i] = r.Next(101);
+					b[i] = r.Next(101);
+				}
+			}
+		}
+//End question 4
+
+//question 5
+We would use params when we unsure or cant expect how many parameter would be recieved
+so params will genarate an array according to the input.
+class Program
+	{
+		static void Main(string[] args)
+		{
+
+			int a = 5, b = 7, e = 3;
+			Checkparams(a, b, e);
+
+			}
+			private static void Checkparams(params int[] x)
+		{
+			for (int i = 0; i < x.Length; i++)
+			{
+				Console.WriteLine(x[i]);
+
+			}
+		}
+		}
+
+*bonus part*The difference between the options is that params can handle a variable array size but it is heavier on memory usage.
+//question 6
+
+{
+	
+	public partial class Form1 : Form
+	{
+		const int MAX = 10;
+		int[] a = new int[MAX];
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			
+			InitializeArrays();
+			PrintArray();
+		}
+		private void PrintArray()
+		{
+			for (int i = 0; i < a.Length; i++)
+			{
+				Console.WriteLine(a[i]);
+			}
+		}
+		private void InitializeArrays()
+		{
+			Random r = new Random();
+			a = new int[10];
+			for (int i = 0; i < 10; i++)
+			{
+				a[i] = r.Next(101);
+			}
+		}
+	}
+}
+//End question 6
+
+

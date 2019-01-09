@@ -1,0 +1,5 @@
+//Part 2 Winforms
+
+2.-We use debug.trace to track data in the running process which is not visible in the program itself
+3.Because windows forms uses a single thread to draw UI and in order to draw in a 'real time' we need another thread to do so. the UI thread will only draw the finale result of the code written within the brackets
+4.(3),(1)
